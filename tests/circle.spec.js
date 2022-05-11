@@ -24,7 +24,7 @@ const circle = require('../src/circle');
 describe('4 - Implemente os casos de teste para a função `circle`', () => {
   it('Verifica se ao receber um raio, a função `circle` retorna um objeto contendo os valores esperados', () => {
     expect(circle('x')).toBe(undefined);
-    expect(typeof circle(1) === 'object');
+    expect(circle(1) instanceof Object).toBe(true);
     expect(Object.keys(circle(1)).length).toBe(3);
     expect(circle()).toBe(undefined);
     expect(Object.values(circle(2))[2]).toBe(12.56);
